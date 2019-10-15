@@ -2,18 +2,17 @@ require 'pry'
 # Payer managing class
 class Player
   attr_accessor :name, :hp
-  @@ennemies = []
+  @@enemies = []
 
   # Méthode d'initialisation qui définit les valurs de noms et d'hp d'un nouveau joueur, et le range ensuite dans un array
   def initialize(name)
     @name = name
     @hp = 10
-    @@ennemies << self
+    @@enemies << self
   end
-
-  # Méthode de classe permettant d'afficher tous les objets "joueurs" présents
-  def self.ennemies
-    @@ennemies
+  # Méthode renvoyant l'array d'ennemis
+  def self.enemies
+    @@enemies
   end
 
     # Méthode affichant l'état des joureurs, s'applique à un objet joueur et renvoie noms, hp, et weapon_level
@@ -54,10 +53,6 @@ class HumanPlayer < Player
     @name = name
     @hp = 100
     @weapon_level = 1
-  end
-
-  def self.human_player
-    @@human_player
   end
 
   def comp_dmg
