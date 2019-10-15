@@ -47,9 +47,9 @@ while player.hp > 0 && (player1.hp > 0 || player2.hp > 0)
     puts "! Wrong command, try again !"
   end
   puts
-  puts "Foes are retaliating !"
-  Player.ennemies.each do |en|
+  Player.enemies.each_with_index do |en, i|
     if en.hp > 0 || player.hp <= 0
+      puts "Enemy #{i} is attacking you !"
       en.attacks(player)
     end
   end

@@ -26,5 +26,3 @@ while player1.hp > 0 && player2.hp > 0
     puts "#{player2.name} WINS !"
   end
 end
-
-binding.pry

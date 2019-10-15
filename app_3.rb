@@ -16,6 +16,7 @@ my_game = Game.new(nick)
 player = my_game.human_player
 while my_game.is_still_ongoing?
   my_game.show_players
+  my_game.new_players_in_sight
   my_game.menu
   choice = gets.chomp
   my_game.menu_choice(choice)
